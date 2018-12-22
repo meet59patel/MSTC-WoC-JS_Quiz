@@ -1,3 +1,4 @@
+//<!--Created by Meet Patel (201801415). All rights reserved :P -->
 var questions = [
     new Question("Which one is not an object oriented programming language?", ["Java", "C#","C++", "C"], "C"),
     new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
