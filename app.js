@@ -47,9 +47,17 @@ function showScores() {
     document.getElementById("options").innerHTML = "";
     document.getElementById("questionStatus").innerHTML = "";
     var y = localStorage.getItem("storedName");
-    document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!";
+    document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!" + "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"1022\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
 };
 
+
+/* var questions = [
+    new Question("Which one is not an object oriented programming language?", ["Java", "C#","C++", "C"], "C"),
+    new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
+    new Question("There are ____ main components of object oriented programming.", ["1", "6","2", "4"], "4"),
+    new Question("Which language is used for web apps?", ["PHP", "Python", "Javascript", "All"], "All"),
+    new Question("MVC is a ____.", ["Language", "Library", "Framework", "All"], "Framework")
+]; */
 
 var questions = [
     new Question("Which one is not an object oriented programming language?", ["Java", "C#","C++", "C"], "C"),
