@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quiz | Homepage</title>
+        <title>Quiz | Questions</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style1.css">
         <link rel='shortcut icon' href='StudioQ-Logo.png' type='image/x-icon'>
@@ -10,10 +10,24 @@
         
     </head>
     <body>
-
-        <script src="form.js"></script>
-        <script src="quiz_controller.js"></script>
-        <script src="questions.js"></script>
-        <script src="app.js"></script>
+        <header><h1>Quiz</h1></header>
+        <div id="div2">
+            <!-- <button id="startBtn" align="middle" onclick="startTheQuiz(); return false;">Go >></button> -->
+            <p id="question" align="middle" style="font-size: 35px; padding: 5px 20px 5px 20px;"></p>
+            <div class="buttons" id="options">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+            <hr style="margin-top: 30px; margin-left: 50px; margin-right: 50px;">
+            <p id="questionStatus">Question x of y</p>
+            <p id="personPlaying"></p>
+            <script src="form.js"></script>
+            <script src="quiz_controller.js"></script>
+            <script src="questions.js"></script>
+            <script src="app.js"></script>
+        </div> <br>
+        <a href="index.html" id="playAgain"></a>
     </body>
 </html>

@@ -1,31 +1,136 @@
 /* <!--Created by Meet Patel (201801415). All rights reserved :P --> */
 body {
-    background-color: #eeeeee;
+    /* background-color: #dddddd; */
+    background-color: #24272E;
+    background-size: 100%;
+    background-repeat: repeat-y;
 }
 
 .buttons {
     margin-top: 30px;
 }
 
+header{
+    background: #a8e755;
+    margin: 0;
+    padding: 1px;
+    border-radius: 5px; 
+}
+header > h1{
+    color: #1D3C6A;
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#div1{
+    vertical-align: middle;
+    background-color: #26c8d473;
+    background-image: "BG1.jpg";
+    width: 55%;
+    height: 60%;
+    align-content: center;
+    align-self: center;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    padding-top: 4px; 
+    padding-bottom: 4px;
+    box-shadow: 8px 8px 8px 7px #1D3C6A;
+    text-shadow: 1.4px 1.4px #fff;
+    min-width: 400px;
+}
+
+#submit1{
+    padding: 45px, 40px; 
+    font-size: 20px; 
+    margin-bottom:20px; 
+    margin-top:15px; 
+    box-shadow: 3px 3px #1D3C6A; 
+    border-radius: 10px;
+}
+
+#textInput1{
+    font-size:25px; 
+    box-shadow: 3px 3px #1D3C6A;
+    border-radius: 10px; 
+    align-self: center; 
+    align-items: center; 
+    margin: 0 auto;
+    box-align: center;
+}
 
 #score{
-    color: red;
+    color: rgb(67, 224, 88);
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
+    text-shadow: 1.4px 1.4px #fff;
+
 }
 
 #btn0, #btn1, #btn2, #btn3{
     background-color: #778797;
-    width: 250px;
+    width: 200px;
     font-size: 20px;
     color: #fff;
     border: 1px solid #1D3C6A;
     border-radius: 50px;
-    margin: 10px 40px 10px 0px;
+    margin: 10px 40px 10px 80px;
     padding: 10px 10px;
 }
 
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
     background-color: #57636e;
+}
+
+#div2{
+    vertical-align: middle;
+    background-color: #26c8d473;
+    background-image: "BG1.jpg";
+    width: 50%;
+    height: 60%;
+    align-content: center;
+    align-self: center;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-top: 4%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 3px 3px 3px 3px #1D3C6A;
+}
+
+#div3{
+    margin: 1px 1px 1px 13px;
+    font-size: 20px;
+}
+
+#startBtn{
+    border-radius: 20px;
+    vertical-align: middle;
+    align-self: center;
+    align-items: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 25px;
+    padding: 15px 10px 15px 10px;
+    box-shadow: 2px 2px 2px 2px #1D3C6A;
+}
+
+
+
+#questionStatus{
+    padding-left: 50px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#playAgain{
+    align-self: center;
+    font-size: 35px;
+    margin-left: 34%;
+    margin-top: 20%;
+    color: aquamarine;
+
 }

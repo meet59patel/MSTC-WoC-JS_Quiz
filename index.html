@@ -8,16 +8,27 @@
         <link rel='shortcut icon' href='StudioQ-Logo.png' type='image/x-icon'>
         <link rel='icon' href='StudioQ-Logo.png' type='image/x-icon'>
     </head>
-    <body>
-        <h1>Hello World!</h1>
-        <h4>Please enter your details below.</h4>
-        <form id="form1">
-            Name: <input type="text" name="name" size="20" required>
-        </form>
-        <button type="submit" onclick="getDetails()">Submit</button>
-        
-        <p id="para1"></p>
-
+    <body background="BG3.jpg">
+        <div id="div1">
+            <h1 align = "middle" style="font-size: 50px; margin-top: 6%;">Hello Contender!</h1>
+            <h4 align = "middle" style="font-size: 35px;">Please enter your name below to get started.</h4>
+            <form id="form1" align = "middle" style="font-size:25px;">
+            <!--    Name: --><input type="text" name="name" size="20%" id="textInput1" placeholder="Name" required>
+                <button type="button" id="submit1" onclick="getDetails();" >Let's Go!</button>
+            </form>
+            <div id="div3">
+                    <h3 style="margin: 0px;">Rules:<br></h3>
+                    <ul>
+                        <li>Answers once chosen  can't be changed</li>
+                        <li>Quiz will be of 5 minutes, 10 questions</li>
+                        <li>Every Question is compulsory</li>
+                        <li>1 Point each, no negative marking</li>
+                    </ul>
+                </div>
+            
+            <p id="para1" align="middle" style="font-size: 20px;"></p>
+            <!-- Add loading bar here...-->
+        </div>
         <script src="form.js"></script>
         <script src="quiz_controller.js"></script>
         <script src="questions.js"></script>
