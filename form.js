@@ -12,6 +12,29 @@ function setGenrePolitics(){
     localStorage.setItem("genreSelected", "Politics");
     document.getElementById("dropButton").innerHTML = "Selected Genre: Indian Politics";
 }
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
+function move() {
+    var elem = document.getElementById("myBar");   
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        javascript:window.location='quizPage.html';
+      } else {
+        wait(50);
+        width++; 
+        elem.style.width = width + '%'; 
+        elem.innerHTML = "&nbsp;&nbsp;&nbsp;" + width * 1  + '%';
+      }
+    }
+  }
 
 function getDetails(){
     var x = document.getElementById("form1");
@@ -23,7 +46,8 @@ function getDetails(){
     else{
         document.getElementById("para1").innerHTML="Hello "+y+"!<br>"+"Please wait till the questions are loaded.";
         localStorage.setItem("storedName", y);
-        javascript:window.location='quizPage.html';
+        move();        
+        //javascript:window.location='quizPage.html';
         /* startTheQuiz(); */
     }
 }

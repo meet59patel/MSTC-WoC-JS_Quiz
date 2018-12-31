@@ -102,8 +102,8 @@ header > h1{
 }
 
 #div3{
-    margin: 1px 1px 1px 13px;
-    font-size: 20px;
+    margin: 1px 1px 0px 20px;
+    font-size: 22px;
 }
 
 #startBtn{
@@ -189,3 +189,26 @@ header > h1{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+
+  /* End of dropdown CSS */
+
+
+  /* Loading Bar Presets */
+  #myProgress {
+    width: 88%;
+    background-color: grey;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: hsl(249, 100%, 66%);
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+  }
+  /* End of Loading Bar */

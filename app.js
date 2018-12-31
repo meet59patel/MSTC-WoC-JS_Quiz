@@ -66,11 +66,11 @@ var string3 = "Politics";
 var questions;
 if(currentGenre === string1){
 questions = [
-    new Question("Which one is not an object oriented programming language?", ["Java", "C#","C++", "C"], "C"),
+    new Question("Which one is not an object oriented programming language?", ["Java", "C#","Ruby", "C"], "C"),
     new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
-    new Question("There are ____ main components of object oriented programming.", ["1", "6","2", "4"], "4"),
-    new Question("Which language is used for web apps?", ["PHP", "Python", "Javascript", "All"], "All"),
-    new Question("MVC is a ____.", ["Language", "Library", "Framework", "All"], "Framework")
+    new Question("Which among the following facilitates users to upload web page files from the personal computers to server?", ["Transmission Control Protocol", "File Transfer Protocol","PHP", "HTTP"], "File Transfer Protocol"),
+    new Question("BIOS is ______.", ["Better Integrated Operating System", "Battery Integrated Operating System", "Basic Input Output System", "Backup Input Output System"], "Basic Input Output System"),
+    new Question("WAV file format is associated with ___.", ["Audio", "Video", "Image", "MS Word Configuration File"], "Audio")
 ];
 }
 else if(currentGenre === string2){
@@ -87,7 +87,7 @@ else if(currentGenre === string3){
     new Question("Who has nickname Pappu?", ["Narendra Modi", "Rahul Gandhi","Baba Ramdev", "Yogi Adityanath"], "Rahul Gandhi"),
     new Question("Who is current governor of Reserve Bank of India?", ["Raghuram Rajan", "Urjit Patel", "Shantikanta Das", "Arun Jaitley"], "Shantikanta Das"),
     new Question("What is NDA with respect to Indian Politics?", ["Non Disclosure Agreement", "National Democretic Alliance","National Defence Academy", "Narendra Damodardas Modi"], "National Democretic Alliance"),
-    new Question("Which language is used for web apps?", ["PHP", "Python", "Javascript", "All"], "All"),
+    new Question("Where is Election Commission located?", ["Mumbai", "Pathik-Aashram", "New Delhi", "Chennai"], "New Delhi"),
     new Question("Who is president of Bahujan Samaj Party?", ["Mamta Banerjee", "Lalu Yadav", "Mayavati", "Kinjal Dave"], "Mayavati")
 ];
 }
