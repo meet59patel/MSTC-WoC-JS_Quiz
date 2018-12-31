@@ -181,6 +181,7 @@ header > h1{
     display: block;
     font-size: 15px;
     border-radius: 5px;
+    min-width: 160px;
   }
   
   /* Change color of dropdown links on hover */
