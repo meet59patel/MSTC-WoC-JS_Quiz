@@ -9,6 +9,9 @@
         <link rel='icon' href='StudioQ-Logo.png' type='image/x-icon'>
     </head>
     <body background="BG3.jpg">
+        <script>
+            localStorage.setItem("genreSelected", "Computer");
+        </script>
         <div id="div1">
             <h1 align = "middle" style="font-size: 50px; margin-top: 6%;">Hello Contender!</h1>
             <h4 align = "middle" style="font-size: 35px;">Please enter your name below to get started.</h4>
@@ -16,11 +19,19 @@
             <!--    Name: --><input type="text" name="name" size="20%" id="textInput1" placeholder="Name" required>
                 <button type="button" id="submit1" onclick="getDetails();" >Let's Go!</button>
             </form>
+            <div class="dropdown">
+                <button onclick="onclickDropdown()" class="dropbtn" id="dropButton">Choose Genre<br>(Computer - by default)</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <button class="listbtn" onclick="setGenreComp()">Computer</a>
+                  <button class="listbtn" onclick="setGenreBBT()">BigBangTheory Series</button>
+                  <button class="listbtn" onclick="setGenrePolitics()">Indian Politics</a>
+                </div>
+              </div>
             <div id="div3">
                     <h3 style="margin: 0px;">Rules:<br></h3>
                     <ul>
                         <li>Answers once chosen  can't be changed</li>
-                        <li>Quiz will be of 5 minutes, 10 questions</li>
+                        <li>Quiz will be of 1 minute, 5 questions</li>
                         <li>Every Question is compulsory</li>
                         <li>1 Point each, no negative marking</li>
                     </ul>
@@ -29,6 +40,10 @@
             <p id="para1" align="middle" style="font-size: 20px;"></p>
             <!-- Add loading bar here...-->
         </div>
+        <footer style="clear: both;
+        position: relative;
+        height: 20px;
+        margin-top: -16px; font-size: 20px; color: dimgrey;">Developed and maintained by Meet Patel.</footer>
         <script src="form.js"></script>
         <script src="quiz_controller.js"></script>
         <script src="questions.js"></script>
