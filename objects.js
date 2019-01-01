@@ -16,7 +16,7 @@ Quiz.prototype.getQuestionIndex = function() {
     return this.questions[this.questionIndex];
 }
 
-Quiz.prototype.guess = function(answer) {
+Quiz.prototype.checkifcorrect = function(answer) {
     if(this.getQuestionIndex().isCorrectAnswer(answer)) {
         this.score++;
     }
@@ -26,4 +26,15 @@ Quiz.prototype.guess = function(answer) {
 
 Quiz.prototype.isEnded = function() {
     return this.questionIndex === this.questions.length;
+}
+
+/***************************** */
+function Question(text, choices, answer){
+    this.text = text;
+    this.answer = answer;
+    this.choices = choices;
+}
+
+Question.prototype.isCorrectAnswer = function(choice){
+    return choice === this.answer;
 }

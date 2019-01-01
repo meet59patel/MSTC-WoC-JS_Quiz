@@ -26,12 +26,22 @@ function move() {
     function frame() {
       if (width >= 100) {
         clearInterval(id);
+        alert("Ready, Set, Go!");
         javascript:window.location='quizPage.html';
       } else {
         wait(50);
         width++; 
         elem.style.width = width + '%'; 
         elem.innerHTML = "&nbsp;&nbsp;&nbsp;" + width * 1  + '%';
+        if(width == 20){
+            document.getElementById("para1").innerHTML+="<br>Ready...";
+        }
+        else if(width == 55){
+            document.getElementById("para1").innerHTML+= "Set...";
+        }
+        else if(width == 80){
+            document.getElementById("para1").innerHTML="Go!";
+        }
       }
     }
   }
@@ -41,21 +51,22 @@ function getDetails(){
     var y = x.elements["name"].value;
      if(y == ""){
         document.getElementById("para1").innerHTML="Please enter name to continue...<br>";
+        alert("Enter your name to get started.");
         return false;
     }
     else{
         document.getElementById("para1").innerHTML="Hello "+y+"!<br>"+"Please wait till the questions are loaded.";
         localStorage.setItem("storedName", y);
-        move();        
+        move();    /* Starts the loading bar. */
         //javascript:window.location='quizPage.html';
         /* startTheQuiz(); */
     }
 }
 
-function guess(id, guess) {//added again
+function checkifcorrect(id, checkifcorrect) {//added again
     var button = document.getElementById(id);
     button.onclick = function() {
-        quiz.guess(guess);
+        quiz.checkifcorrect(checkifcorrect);
         populate();
     }
 };

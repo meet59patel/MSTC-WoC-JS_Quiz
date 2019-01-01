@@ -15,17 +15,17 @@ function populate() {
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
             element.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
+            checkifcorrect("btn" + i, choices[i]);
         }
 
         showProgress();
     }
 };
 
-function guess(id, guess) {
+function checkifcorrect(id, checkifcorrect) {
     var button = document.getElementById(id);
     button.onclick = function() {
-        quiz.guess(guess);
+        quiz.checkifcorrect(checkifcorrect);
         populate();
     }
 };
@@ -42,6 +42,12 @@ function showProgress() {
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
+    if(quiz.score == 5){
+        gameOverHTML += "<br>" + "Perfect Score!";
+    }
+    else{
+        gameOverHTML += "<br>" + "Do better next time.";
+    }
     //var element = document.getElementById("quiz");
     var element = document.getElementById("question");
     element.innerHTML = gameOverHTML;
@@ -50,15 +56,6 @@ function showScores() {
     var y = localStorage.getItem("storedName");
     document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!" + "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"1022\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
 };
-
-
- /* var questions = [
-    new Question("Which one is not an object oriented programming language?", ["Java", "C#","C++", "C"], "C"),
-    new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
-    new Question("There are ____ main components of object oriented programming.", ["1", "6","2", "4"], "4"),
-    new Question("Which language is used for web apps?", ["PHP", "Python", "Javascript", "All"], "All"),
-    new Question("MVC is a ____.", ["Language", "Library", "Framework", "All"], "Framework")
-];  */
 
 var string1 = "Computer";
 var string2 = "BigBangTheory";

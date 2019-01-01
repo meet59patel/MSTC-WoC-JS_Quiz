@@ -61,6 +61,12 @@ header > h1{
     box-align: center;
 }
 
+#para1 {
+    text-shadow: #24272E;
+    font-size: 29px;
+    box-shadow: #24272E;
+}
+
 #score{
     color: rgb(67, 224, 88);
     text-align: center;
