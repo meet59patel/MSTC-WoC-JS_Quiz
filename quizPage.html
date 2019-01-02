@@ -8,6 +8,33 @@
         <link rel='shortcut icon' href='StudioQ-Logo.png' type='image/x-icon'>
 <link rel='icon' href='StudioQ-Logo.png' type='image/x-icon'>
         
+        <script>
+            function startTimer(duration, display) {
+                var timer = duration, minutes, seconds;
+                setInterval(function () {
+                    minutes = parseInt(timer / 60, 10)
+                    seconds = parseInt(timer % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.textContent = minutes + ":" + seconds + " Minutes left";
+
+                    if (--timer < 0) {
+                        //timer = duration;
+                        if(timer<0 && timer>-2)showScores();
+                        document.getElementById("time").style.visibility = "hidden";
+                    }
+                }, 1000);
+}
+
+window.onload = function () {
+    var twoMinutes =  2,
+        display = document.querySelector('#time');
+    startTimer(twoMinutes, display);
+};
+        </script>
+
     </head>
     <body>
         <header><h1>Quiz</h1></header>
@@ -23,6 +50,7 @@
             <hr style="margin-top: 30px; margin-left: 50px; margin-right: 50px;">
             <p id="questionStatus">Question 1 of 5</p>
             <p id="personPlaying"></p>
+            <span id="time">2:00 Minutes</span>
             <script src="form.js"></script>
             <script src="objects.js"></script>
             <script src="main.js"></script>

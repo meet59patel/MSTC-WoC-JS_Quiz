@@ -10,6 +10,12 @@ body {
     margin-top: 30px;
 }
 
+#time{
+    font-size: 29px;
+    padding-left: 35px;
+    color: #91c74b;
+    font-weight: bold;
+}
 header{
     background: #a8e755;
     margin: 0;
