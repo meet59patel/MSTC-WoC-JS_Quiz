@@ -53,8 +53,10 @@ function showProgress() {
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
+    document.getElementById("time").style.visibility = "hidden";
+    document.getElementById("creditfooter").style.fontSize = "40px";
     if(quiz.score == 5){
-        gameOverHTML +=  "Perfect Score!";
+        gameOverHTML +=  "Perfect Score!    ";
         gameOverHTML += "<img src=\"dancing.gif\">";
     }
     else{
@@ -67,7 +69,9 @@ function showScores() {
     document.getElementById("options").innerHTML = "";
     document.getElementById("questionStatus").innerHTML = "";
     var y = localStorage.getItem("storedName");
-    document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!" + "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"1022\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
+    document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!";
+    document.getElementById("feedback").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
+    document.getElementById("score").scrollIntoView();
 };
 
 var string1 = "Computer";

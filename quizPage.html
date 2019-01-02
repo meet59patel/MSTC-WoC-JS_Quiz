@@ -24,14 +24,15 @@
                         //timer = duration;
                         if(timer<0 && timer>-2)showScores();
                         document.getElementById("time").style.visibility = "hidden";
+                        document.getElementById("creditfooter").style.fontSize = "40px";
                     }
                 }, 1000);
 }
 
 window.onload = function () {
-    var twoMinutes =  2,
+    var oneMinute = 60 * 1,
         display = document.querySelector('#time');
-    startTimer(twoMinutes, display);
+    startTimer(oneMinute, display);
 };
         </script>
 
@@ -50,15 +51,16 @@ window.onload = function () {
             <hr style="margin-top: 30px; margin-left: 50px; margin-right: 50px;">
             <p id="questionStatus">Question 1 of 5</p>
             <p id="personPlaying"></p>
-            <span id="time">2:00 Minutes</span>
+            <span id="time">1:00 Minute</span>
             <script src="form.js"></script>
             <script src="objects.js"></script>
             <script src="main.js"></script>
         </div> <br>
         <a href="index.html" id="playAgain"></a>
+        <p id="feedback"></p>
         <footer style="clear: both;
         position: relative;
         height: 20px;
-        margin-top: -16px; font-size: 20px; color: dimgrey;">Developed and maintained by Meet Patel.&nbsp;&nbsp;<a href="https://github.com/meet59patel"><img src="./Images/gitico.png" height="35" width="40"></a><a href="https://www.facebook.com/Meet100Patel"><img src="./Images/fbico.png" height="36" width="36"></a><a href="https://www.instagram.com/meet100patel/"><img src="./Images/instaico.png" height="39" width="45"></a></footer>
+        margin-top: -16px; font-size: 20px; color: dimgrey;" id="creditfooter">Developed and maintained by Meet Patel.&nbsp;&nbsp;<a href="https://github.com/meet59patel"><img src="./Images/gitico.png" height="35" width="40"></a><a href="https://www.facebook.com/Meet100Patel"><img src="./Images/fbico.png" height="36" width="36"></a><a href="https://www.instagram.com/meet100patel/"><img src="./Images/instaico.png" height="39" width="45"></a></footer>
     </body>
 </html>
