@@ -57,6 +57,7 @@ function getDetails(){
     else{
         document.getElementById("para1").innerHTML="Hello "+y+"!<br>"+"Please wait till the questions are loaded.";
         localStorage.setItem("storedName", y);
+        document.getElementById("myBar").scrollIntoView();
         move();    /* Starts the loading bar. */
         //javascript:window.location='quizPage.html';
         /* startTheQuiz(); */

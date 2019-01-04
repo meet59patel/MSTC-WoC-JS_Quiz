@@ -13,7 +13,7 @@
             localStorage.setItem("genreSelected", "Computer");
         </script>
         <div id="div1">
-            <h1 align = "middle" style="font-size: 50px; margin-top: 6%;">Hello Contender!</h1>
+            <h1 id="hello" align = "middle" style="font-size: 50px; margin-top: 6%;">Hello Contender!</h1>
             <h4 align = "middle" style="font-size: 35px;">Please enter your name below to get started.</h4>
             <form id="form1" align = "middle" style="font-size:25px;">
             <!--    Name: --><input type="text" name="name" size="20%" id="textInput1" placeholder="Name" required>
@@ -51,5 +51,6 @@
         <script src="form.js"></script>
         <script src="objects.js"></script>
         <script src="main.js"></script>
+        <script>document.getElementById("hello").scrollIntoView();</script>
     </body>
 </html>
