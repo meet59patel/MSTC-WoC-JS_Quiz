@@ -1,6 +1,6 @@
 //<!--Created by Meet Patel (201801415). All rights reserved :P -->
 var currentGenre = localStorage.getItem("genreSelected");
-
+/* var isValidSession = localStorage.getItem("isValidSession"); */
 /* function countdownTimer(secondsLeft, timerElement){
     var element1 = document.getElementById("timer1");
     element1.innerHTML = "Time Left: " + secondsLeft + " seconds";
@@ -16,12 +16,16 @@ function populate() {
     if(quiz.isEnded()) {
         showScores();
     }
+    /* else if(isValidSession == false){
+        alert("Quiz cannot be accessed directly. Redirecting to form page..."); //Makes quiz inaccessible directly via URL of quizPage.html
+        javascript:window.location='index.html';
+    } */
     else {
-        // show question
+        // show question dynamically
         var element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionIndex().text;
 
-        // show options
+        // show options dynamically
         var choices = quiz.getQuestionIndex().choices;
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
@@ -48,20 +52,25 @@ function showProgress() {
     var y = localStorage.getItem("storedName");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length +  ".&nbsp;&nbsp;" + y + " is playing.";
     element.innerHTML += "<br>" + "Genre: " + currentGenre;
+    document.getElementById("dot"+currentQuestionNumber).style.backgroundColor = "white";
+
 };
 
 function showScores() {
+    if(isValidSession == true){
+        localStorage.setItem("isValidSession", false);
+    }
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
-    document.getElementById("time").style.visibility = "hidden";
+    document.getElementById("time").remove();
     document.getElementById("creditfooter").style.fontSize = "40px";
     if(quiz.score == 5){
         gameOverHTML +=  "Perfect Score!    ";
-        gameOverHTML += "<img src=\"dancing.gif\">";
+        gameOverHTML += "<br>"+"<img src=\"dancing.gif\">";
     }
     else{
         gameOverHTML += "<br>" + "Do better next time.";
-        gameOverHTML += "<img src=\"tenor.gif\">";
+        gameOverHTML += "<br>"+"<img src=\"tenor.gif\">";
     }
     //var element = document.getElementById("quiz");
     var element = document.getElementById("question");
@@ -72,6 +81,7 @@ function showScores() {
     document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!";
     document.getElementById("feedback").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
     document.getElementById("score").scrollIntoView();
+    document.getElementById("statusDots").remove();
 };
 
 var string1 = "Computer";
@@ -105,5 +115,5 @@ else if(currentGenre === string3){
     new Question("Who is president of Bahujan Samaj Party?", ["Mamta Banerjee", "Lalu Yadav", "Mayavati", "Kinjal Dave"], "Mayavati")
 ];
 }
-var quiz = new Quiz(questions);
-populate();
+var quiz = new Quiz(questions); //makes new quiz instance
+populate(); //starts the quiz

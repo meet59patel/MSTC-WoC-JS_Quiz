@@ -1,11 +1,5 @@
 //<!--Created by Meet Patel (201801415). All rights reserved :P -->
 
-/* function startTheQuiz(){
-    var y;
-    y = localStorage.getItem("storedName");
-    document.getElementById("para2").innerHTML="Welcome to the quiz, " + y + "!<br>";
-} */
-
 function Quiz(questions) {
     this.score = 0;
     this.questions = questions;

@@ -1,9 +1,8 @@
 /* <!--Created by Meet Patel (201801415). All rights reserved :P --> */
 body {
     /* background-color: #dddddd; */
-    background-color: #24272E;
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-color: rgb(46, 51, 61);
+    background-repeat: repeat;
 }
 
 .buttons {
@@ -41,10 +40,10 @@ header > h1{
     margin-left: 20%;
     margin-top: 8%;
     margin-bottom: 5%;
-    padding-top: 4px; 
-    padding-bottom: 4px;
+    padding-top: 3px; 
+    padding-bottom: 6px;
     box-shadow: 8px 8px 8px 7px #1D3C6A;
-    text-shadow: 1.4px 1.4px #fff;
+    text-shadow: 1px 1px #fff;
     min-width: 400px;
 }
 
@@ -95,6 +94,28 @@ header > h1{
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
     background-color: #57636e;
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(155, 154, 154, 0.836);
+    color: #1D3C6A;
+    font-size: 25px;
+    border-radius: 10%;
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    padding-left: 0.5%;
+    padding-right: 0%;
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+
+#statusDots{
+    margin-left: 20%;
+    margin-right: 10%;
+
 }
 
 #div2{
