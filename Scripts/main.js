@@ -52,7 +52,7 @@ function showProgress() {
     var y = localStorage.getItem("storedName");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length +  ".&nbsp;&nbsp;" + y + " is playing.";
     element.innerHTML += "<br>" + "Genre: " + currentGenre;
-    document.getElementById("dot"+currentQuestionNumber).style.backgroundColor = "white";
+    document.getElementById("dot"+currentQuestionNumber).style.backgroundColor = "#99ff33";
 
 };
 
