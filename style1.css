@@ -1,6 +1,5 @@
 /* <!--Created by Meet Patel (201801415). All rights reserved :P --> */
 body {
-    /* background-color: #dddddd; */
     background-color: rgb(46, 51, 61);
     background-repeat: repeat;
 }
@@ -30,7 +29,7 @@ header > h1{
 
 #div1{
     vertical-align: middle;
-    background-color: #26c8d473;
+    background-color: #26c8d493;
     background-image: "BG1.jpg";
     width: 55%;
     height: 60%;
@@ -168,7 +167,6 @@ header > h1{
 
 }
 
-/* ***** */
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
