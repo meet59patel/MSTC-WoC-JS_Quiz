@@ -2,15 +2,24 @@
 
 function setGenreComp(){
     localStorage.setItem("genreSelected", "Computer");
-    document.getElementById("dropButton").innerHTML = "Selected Genre: Computer";
+    //document.getElementById("dropButton").innerHTML = "Selected Genre: Computer";
+    document.getElementById("compBtn").style.backgroundColor = "#6699ff";
+    document.getElementById("bbtBtn").style.backgroundColor = "#f1f1f1";
+    document.getElementById("ipBtn").style.backgroundColor = "#f1f1f1";
 }
 function setGenreBBT(){
     localStorage.setItem("genreSelected", "BigBangTheory");
-    document.getElementById("dropButton").innerHTML = "Selected Genre: Big Bang Theory TV Series";
+    //document.getElementById("dropButton").innerHTML = "Selected Genre: Big Bang Theory TV Series";
+    document.getElementById("bbtBtn").style.backgroundColor = "#6699ff";
+    document.getElementById("compBtn").style.backgroundColor = "#f1f1f1";
+    document.getElementById("ipBtn").style.backgroundColor = "#f1f1f1";
 }
 function setGenrePolitics(){
     localStorage.setItem("genreSelected", "Politics");
-    document.getElementById("dropButton").innerHTML = "Selected Genre: Indian Politics";
+    //document.getElementById("dropButton").innerHTML = "Selected Genre: Indian Politics";
+    document.getElementById("ipBtn").style.backgroundColor = "#6699ff";
+    document.getElementById("bbtBtn").style.backgroundColor = "#f1f1f1";
+    document.getElementById("compBtn").style.backgroundColor = "#f1f1f1";
 }
 function wait(ms){
     var start = new Date().getTime();

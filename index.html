@@ -17,29 +17,30 @@
         </style>                
     </head>
     <body background="Images/BG1.png">
-        <script>
-            localStorage.setItem("genreSelected", "Computer");
-        </script>
         <div id="div1">
             <h1 id="hello" align = "middle" style="font-size: 50px; margin-top: 4%; font-family: 'Maven Pro', sans-serif;">Let's Quiz!</h1>
             <h4 align = "middle" style="font-size: 35px; font-family: 'Istok Web', sans-serif;">Enter your name to get started.</h4>
             <form id="form1" align = "middle" style="font-size:25px;">
-            <!--    Name: --><input type="text" name="name" size="20%" id="textInput1" placeholder="Name" required>
+            <input type="text" name="name" size="20%" id="textInput1" placeholder="Name" required>
                 <button type="button" id="submit1" onclick="localStorage.setItem('isValidSession', true); getDetails();" >Let's Go!</button>
             </form>
             <div class="dropdown">
-                <button onclick="onclickDropdown()" class="dropbtn" id="dropButton">Choose Genre<br>(Computer - by default)</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <button class="listbtn" onclick="setGenreComp()">Computer</a>
-                  <button class="listbtn" onclick="setGenreBBT()">BigBangTheory Series</button>
-                  <button class="listbtn" onclick="setGenrePolitics()">Indian Politics</a>
+                <!-- <button onclick="onclickDropdown()" class="dropbtn" id="dropButton">Choose Genre<br>(Computer - by default)</button> -->
+                <div id="myDropdown" class="dropdown-content">Select Genre:<br>
+                  <button class="listbtn" onclick="setGenreComp()" id="compBtn">Computer</a>
+                  <button class="listbtn" onclick="setGenreBBT()" id="bbtBtn">BigBangTheory Series</button>
+                  <button class="listbtn" onclick="setGenrePolitics()" id="ipBtn">Indian Politics</a>
                 </div>
-              </div>
+            </div>
+            <script>
+                localStorage.setItem("genreSelected", "Computer");
+                document.getElementById("compBtn").style.backgroundColor = "#6699ff";
+            </script>
             <div id="div3" style="font-family: 'Overpass', sans-serif;">
                     <h3 style="margin: 0px;">Rules and Notes:</h3>
                     <ul>
                         <li>Answers once chosen  can't be changed</li>
-                        <li>Quiz will be of 1 minute, 10 questions</li>
+                        <li>Quiz will be of 2 minutes, 10 questions</li>
                         <li>Every Question is compulsory</li>
                         <li>1 Point each, no negative marking</li>
                         <li>Click to submit the answers</li>
