@@ -52,7 +52,7 @@ function showProgress() {
     var y = localStorage.getItem("storedName");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length +  ".&nbsp;&nbsp;" + y + " is playing.";
     element.innerHTML += "<br>" + "Genre: " + currentGenre;
-    document.getElementById("dot"+currentQuestionNumber).style.backgroundColor = "#99ff33";
+    document.getElementById("dot"+currentQuestionNumber).style.backgroundColor = "#2fe66c";
 
 };
 
@@ -64,6 +64,7 @@ function showScores() {
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     document.getElementById("time").remove();
     document.getElementById("creditfooter").style.fontSize = "40px";
+    localStorage.setItem("currentScore", quiz.score);
     if(quiz.score == questions.length){
         gameOverHTML +=  "Perfect Score!    ";
         gameOverHTML += "<br>"+"<img src=\"dancing.gif\">";
@@ -75,14 +76,19 @@ function showScores() {
     //var element = document.getElementById("quiz");
     var element = document.getElementById("question");
     element.innerHTML = gameOverHTML;
-    document.getElementById("options").innerHTML = "";
+    document.getElementById("options").remove();
     document.getElementById("questionStatus").innerHTML = "";
     var y = localStorage.getItem("storedName");
     document.getElementById("playAgain").innerHTML = "Click to play again, " + y + "!";
-    document.getElementById("feedback").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
+    document.getElementById("feedback").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeQE6tjV0aU_iWYfYCPyBTlGKmdBEdy9O8ONvC1GwjdkrjVCQ/viewform?embedded=true\" width=\"1430\" height=\"450\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"100\">Loading...</iframe>";
     document.getElementById("score").scrollIntoView();
     document.getElementById("statusDots").remove();
+    document.getElementById("leaderboardBtn").style.visibility = "visible";
 };
+
+function showLeaderboard(){
+    javascript:window.location='leaderboards.html';
+}
 
 var string1 = "Computer";
 var string2 = "BigBangTheory";
