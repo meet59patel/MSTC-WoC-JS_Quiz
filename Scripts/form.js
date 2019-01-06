@@ -45,7 +45,7 @@ function move() {
         if(width == 20){
             document.getElementById("para1").innerHTML+="<br>Ready...";
         }
-        else if(width == 55){
+        else if(width == 50){
             document.getElementById("para1").innerHTML+= "Set...";
         }
         else if(width == 80){
