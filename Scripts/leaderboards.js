@@ -1,9 +1,9 @@
 var currentName = localStorage.getItem("storedName");
 var currentScore = localStorage.getItem("currentScore");
 var scores = [{ name: "Naman Agrawal", score: 10 }, 
-                { name: "Vatsal Modi", score: 9 }, 
-                { name: "Harsh Patil", score: 8 }, 
-                { name: "Parth Watson", score: 7 }, 
+                { name: "Vatsal Modi", score: 8 }, 
+                { name: "Harsh Patil", score: 5 }, 
+                { name: "Parth Watson", score: 2 }, 
                 { name: currentName+" (You)", score: currentScore}
             ];
 

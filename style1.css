@@ -210,12 +210,15 @@ header > h1{
   /* Links inside the dropdown */
   .dropdown-content button {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 8px;
     text-decoration: none;
     /* display: block; */
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 5px;
     min-width: 160px;
+  }
+  #ipBtn{
+      margin-right: 0%;
   }
   
   /* Change color of dropdown links on hover */
