@@ -1,25 +1,10 @@
 //<!--Created by Meet Patel (201801415). All rights reserved :P -->
 var currentGenre = localStorage.getItem("genreSelected");
-/* var isValidSession = localStorage.getItem("isValidSession"); */
-/* function countdownTimer(secondsLeft, timerElement){
-    var element1 = document.getElementById("timer1");
-    element1.innerHTML = "Time Left: " + secondsLeft + " seconds";
-    if(secondsLeft<1){
-        clearTimeout(timer);
-        showScores();
-    }
-    secondsLeft--;
-    var timer = setTimeout('countdownTimer('+secs+', " '+timerElement+' ")' , 1000);
-} */
 
 function populate() {
     if(quiz.isEnded()) {
         showScores();
     }
-    /* else if(isValidSession == false){
-        alert("Quiz cannot be accessed directly. Redirecting to form page..."); //Makes quiz inaccessible directly via URL of quizPage.html
-        javascript:window.location='index.html';
-    } */
     else {
         // show question dynamically
         var element = document.getElementById("question");
@@ -57,9 +42,6 @@ function showProgress() {
 };
 
 function showScores() {
-    if(isValidSession == true){
-        localStorage.setItem("isValidSession", false);
-    }
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     document.getElementById("time").remove();
